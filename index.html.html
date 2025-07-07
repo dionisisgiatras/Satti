@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Satti Blog</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for a clean look (as a fallback) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            /* Prioritize San Francisco font, with Inter and generic sans-serif as fallbacks */
+            font-family: "SF Pro Display", "SF Pro Text", "San Francisco", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #1a202c; /* Dark grey background for the page (Tailwind's gray-900) */
+            color: #e2e8f0; /* Light text color for general body content (Tailwind's gray-200) */
+        }
+        /* Custom CSS for the blurred background effect as Tailwind doesn't directly support backdrop-filter blur */
+        .header-background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://tse1.explicit.bing.net/th/id/OIP.mFwIuNGmnnzA66nJ1wfL4QHaJL?rs=1&pid=ImgDetMain&o=7&rm=3');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Adjust blur strength as needed */
+            -webkit-filter: blur(10px); /* For Safari */
+            z-index: -1; /* Ensure it's behind the content */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="relative w-full flex items-center justify-center overflow-hidden shadow-lg min-h-[16rem] sm:min-h-[20rem] md:min-h-[24rem] lg:min-h-[28rem]">
+        <!-- Blurred Background Image -->
+        <div class="header-background-blur"></div>
+
+        <!-- Header Content Container with Enhanced Fade Effect -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-start w-full max-w-6xl py-8 px-4 md:px-8
+                     bg-gradient-to-r from-gray-900/40 to-gray-800/20 backdrop-blur-sm rounded-xl mx-4">
+            <!-- Marina Satti Image -->
+            <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
+                <img src="https://tse1.explicit.bing.net/th/id/OIP.mFwIuNGmnnzA66nJ1wfL4QHaJL?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Marina Satti"
+                     class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md border-transparent">
+            </div>
+
+            <!-- Artist Info -->
+            <div class="text-center md:text-left text-white">
+                <!-- Tags - Translucent white -->
+                <div class="flex justify-center md:justify-start mb-2">
+                    <span class="bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm mr-2">Greek Singer</span>
+                    <!-- You can add more tags here if desired -->
+                </div>
+                <!-- Artist Name -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">Marina Satti</h1>
+                <!-- Small Description Added Here -->
+                <p class="text-lg md:text-xl text-gray-300 mt-1">
+                    A talented artist blending traditional Greek sounds with modern pop.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+        <!-- Moderator Notice Section -->
+        <section id="infoModal" class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg relative w-full mb-8">
+            <!-- Close Button -->
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-2xl font-bold cursor-pointer">
+                &times;
+            </button>
+            <div class="flex items-center mb-4">
+                <h3 class="text-xl font-semibold text-gray-100 mr-2">Moderator Notice</h3>
+                <!-- Verified Moderator Tag - Now matching header tag style -->
+                <span class="bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">Verified Moderator</span>
+            </div>
+            <p class="text-gray-300 mb-2">
+                This article was created by a user of our Discord Group Chat and originally shared in the #music-discussion channel.
+            </p>
+            <p class="text-gray-300">
+                Reproduction or distribution elsewhere without the owner's explicit permission is strictly prohibited. Violation of this rule will result in a 24-hour mute in the Discord Group Chat.
+            </p>
+        </section>
+
+        <!-- Biography Section -->
+        <section class="p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Biography</h2>
+            <p class="text-gray-400 mb-4">
+                Marina Satti (Greek: Μαρίνα Σάττι; born 26 December 1986) is a Greek singer, composer, music producer, and actress.
+                Her music combines traditional Greek, Arab, and Balkan sounds with urban elements, rhythm, and contemporary production.
+            </p>
+            <p class="text-gray-400 mb-4">
+                Born in Athens, Greece, Satti lived there until the age of six before being raised on the island of Crete in Heraklion.
+                Her father was an Arab doctor-anesthesiologist from Sudan, and her mother is a chemical engineer from Heraklion with ancestry from the Greek population of Asia Minor.
+            </p>
+            <p class="text-gray-400 mb-4">
+                Satti began piano lessons at five years old and later studied classical singing and jazz. She also pursued architecture for three years at the National Technical University of Athens and studied at drama schools. In 2012, she completed a three-year degree in jazz composition, contemporary writing, and production at the Berklee College of Music in the U.S.A.
+            </p>
+            <p class="text-gray-400">
+                Throughout her career, Satti has performed globally, collaborated with various artists, and founded "Fonés" (Voices), a female a cappella group, and "CHÓRES", a choir of 200 women, promoting Greek traditional songs. She has also contributed her voice to numerous cartoons, including Moana and The Little Mermaid for Greece. She represented Greece at the Eurovision Song Contest 2024 with her song "Zari".
+            </p>
+        </section>
+
+        <!-- Musical Style and Career Highlights Section -->
+        <section class="p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Musical Style and Career Highlights</h2>
+            <p class="text-gray-400 mb-4">
+                Satti's distinctive musical style seamlessly blends traditional Greek, Arabic, and Balkan sounds with contemporary urban elements, characterized by unique rhythms and production.
+                Her diverse artistic endeavors include successful music releases, international tours, and extensive work in theater and voice acting.
+            </p>
+            <p class="text-gray-400 mb-4">
+                Early in her career, she was a member of the EBU's European Jazz Orchestra and performed with the World Jazz Nonet at the John F. Kennedy Center in Washington, D.C.
+                In 2011, she collaborated with Bobby McFerrin and the a cappella vocal group The Singing Tribe.
+            </p>
+            <p class="text-gray-400 mb-4">
+                In 2016, Satti founded "Fonés" (Voices), a female a cappella group performing traditional polyphonic songs.
+                She also established "CHÓRES", a choir of 200 women, dedicated to promoting Greek traditional songs through performances in archaeological sites.
+                Her breakthrough came with singles like "Koupes" (2016) and "Mantissa" (2017), which gained widespread attention and millions of views.
+            </p>
+            <p class="text-gray-400">
+                Satti has performed in over 20 countries and collaborated with notable artists. She has also lent her voice to 24 cartoons, including the Greek versions of Moana (2016, 2024) and Ariel in The Little Mermaid (2023).
+            </p>
+        </section>
+
+        <!-- Eurovision Song Contest 2024 Section -->
+        <section class="p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Eurovision Song Contest 2024</h2>
+            <p class="text-gray-400 mb-4">
+                On October 24, 2023, Marina Satti was announced as Greece's representative for the Eurovision Song Contest 2024, held in Malmö, Sweden.
+                Her entry was the song "Zari" (Greek: "Ζάρι", meaning "Dice"), which she co-wrote.
+            </p>
+            <p class="text-gray-400 mb-4">
+                "Zari" fuses traditional Greek and Balkan music with urban vibes and pop/rap influences, sung primarily in Greek with some English phrases.
+                The song aimed to showcase the connection of Greece's rich tradition, history, and popular culture with the country's modern generation.
+            </p>
+            <p class="text-gray-400">
+                In the Grand Final on May 11, 2024, Marina Satti finished in 11th place for Greece with 126 points.
+            </p>
+        </section>
+
+        <!-- Discography Section -->
+        <section class="p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Discography</h2>
+
+            <h3 class="text-xl font-semibold text-gray-200 mb-3">Albums & EPs:</h3>
+            <div id="album-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Album cards will be dynamically inserted here by JavaScript -->
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-200 mb-3">Singles:</h3>
+            <div id="single-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Single cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="p-6 md:p-8 mb-8 bg-gray-800 rounded-xl shadow-md">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Connect with Marina Satti</h2>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="https://www.instagram.com/marina_satti/" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center bg-pink-600 hover:bg-pink-700 text-white font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+                    <i class="fab fa-instagram text-lg mr-2"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@marina_satti" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center bg-black hover:bg-gray-900 text-white font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+                    <i class="fab fa-tiktok text-lg mr-2"></i> TikTok
+                </a>
+                <a href="https://open.spotify.com/artist/2W4apaxME2OLw8qqhZK7aJ" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+                    <i class="fab fa-spotify text-lg mr-2"></i> Spotify
+                </a>
+                <a href="https://www.youtube.com/channel/UCqXl1t8f1f1f1f1f1f1f1f1f" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+                    <i class="fab fa-youtube text-lg mr-2"></i> YouTube
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Album Details Modal -->
+    <div id="albumDetailsModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg relative w-11/12 max-w-2xl">
+            <button id="closeAlbumModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-2xl font-bold cursor-pointer">
+                &times;
+            </button>
+            <h3 id="albumTitle" class="text-xl font-semibold text-gray-100 mb-2"></h3>
+            <p id="albumDescription" class="text-gray-300 text-sm mb-4"></p>
+            <h4 class="text-lg font-semibold text-gray-200 mb-3">Songs:</h4>
+            <ul id="albumSongsList" class="list-none p-0">
+                <!-- Songs will be dynamically inserted here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Song Details Modal (used for both album songs and singles) -->
+    <div id="songDetailsModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg relative w-11/12 max-w-xl">
+            <button id="closeSongModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-2xl font-bold cursor-pointer">
+                &times;
+            </button>
+            <h3 id="songTitle" class="text-xl font-semibold text-gray-100 mb-2"></h3>
+            <p id="songInfo" class="text-gray-300 text-base"></p>
+        </div>
+    </div>
+
+    <!-- Footer Section (Placeholder) -->
+    <footer class="w-full bg-gray-950 text-gray-400 text-center p-4 mt-8 rounded-t-lg">
+        <p>&copy; 2025 Marina Satti Fan Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // --- Data for Discography ---
+        const discographyData = {
+            "albums": {
+                "YENNA": {
+                    title: "YENNA",
+                    year: 2022,
+                    description: "Marina Satti's debut studio album, blending traditional Greek sounds with modern pop and urban influences. It features a diverse range of tracks showcasing her unique artistic vision.",
+                    songs: [
+                        { id: "yenna-anatoli", title: "Anatoli", info: "A platinum-certified track with a strong traditional feel. 'Anatoli' (meaning 'East') is known for its evocative melodies and reflects Satti's deep connection to Eastern Mediterranean musical traditions. It was a significant track in establishing her unique sound." },
+                        { id: "yenna-lola", title: "Lola", info: "A gold-certified hit known for its catchy rhythm and vibrant energy. 'Lola' quickly became a fan favorite, showcasing Satti's ability to create widely appealing pop songs while retaining her distinctive style." },
+                        { id: "yenna-epanostotrapez", title: "Epano Sto Trapezi", info: "A vibrant track, perfect for celebrations. This song embodies a festive atmosphere, often performed live with high energy, inviting listeners to join in the joyous mood." },
+                        { id: "yenna-elaela", title: "Ela Ela (feat. Saske)", info: "A popular collaboration, platinum-certified. This track highlights Satti's versatility, blending her unique vocals with Saske's style, resulting in a modern and engaging piece." },
+                        { id: "yenna-autokinhto", title: "Autokinhto", info: "A dynamic song with a modern edge. 'Autokinhto' (meaning 'Car') features contemporary production elements, demonstrating Satti's continuous evolution and willingness to experiment with new sounds." },
+                        { id: "yenna-blouzaki", title: "Blouzaki", info: "A melodic and engaging piece. This song showcases Satti's vocal prowess and storytelling ability, drawing listeners into its narrative with captivating harmonies." },
+                        { id: "yenna-kavourakia", title: "Kavourakia (feat. Locomondo)", info: "A lively collaboration with the popular Greek band Locomondo. 'Kavourakia' (meaning 'Crabs') is a playful and upbeat track, combining Satti's style with Locomondo's reggae and ska influences." },
+                        { id: "yenna-byebye", title: "Bye Bye (feat. Negros Tou Moria)", info: "A track featuring the distinct sound of Negros Tou Moria. This collaboration brings together different artistic perspectives, creating a unique and memorable listening experience." },
+                        { id: "yenna-igaga", title: "I Gaga!", info: "An energetic and memorable song. 'I Gaga!' is characterized by its strong rhythm and powerful vocals, making it a standout track on the album." },
+                        { id: "yenna-pop", title: "POP (feat. Tso)", info: "A collaboration with Tso, showcasing pop influences. This song further explores Satti's pop sensibilities, offering a fresh and contemporary sound while maintaining her artistic integrity." }
+                    ]
+                },
+                "P.O.P.": {
+                    title: "P.O.P. (EP)",
+                    year: 2024,
+                    description: "An extended play released after her Eurovision participation, featuring a mix of urban rhythms and Greek folklore, including her hit Eurovision entry.",
+                    songs: [
+                        { id: "pop-zari", title: "Zari", info: "Greece's entry for Eurovision Song Contest 2024, blending Balkan sounds with reggaeton rhythms. 'Zari' (meaning 'Dice') became an international sensation, showcasing Satti's unique fusion of traditional and modern elements on a global stage." },
+                        { id: "pop-tucutum", title: "Tucutum", info: "A viral song with humorous references to Balkan trap trends. 'Tucutum' gained significant traction for its innovative sound and playful lyrics, demonstrating Satti's ability to connect with a wide audience." },
+                        { id: "pop-lalalala", title: "Lalalala", info: "A catchy and energetic track. This song is known for its infectious melody and upbeat tempo, making it a favorite for dance and lively performances." },
+                        { id: "pop-ahthalassa", title: "Ah Thalassa", info: "A song with a distinct traditional feel. 'Ah Thalassa' (meaning 'Oh Sea') evokes a sense of nostalgia and deep connection to Greek folk music, showcasing Satti's vocal range and emotional depth." },
+                        { id: "pop-stiniyiamas", title: "Stin Iyia Mas", info: "A track closer to her earlier artistic identity, a Greek expression for making a toast. This song offers a more reflective and celebratory tone, inviting listeners to share in moments of joy and camaraderie." },
+                        { id: "pop-mixtape", title: "Mixtape", info: "A dynamic track showcasing her versatile style. 'Mixtape' is an experimental piece that blends various genres, reflecting Satti's continuous exploration of new musical territories." }
+                    ]
+                },
+                "Pop Too": {
+                    title: "Pop Too",
+                    year: 2025,
+                    description: "Marina Satti's latest studio album, continuing her exploration of diverse musical genres and contemporary sounds. This album builds upon her previous works, offering fresh perspectives and innovative compositions.",
+                    songs: [
+                        { id: "poptoo-song1", title: "Song 1 (Pop Too)", info: "The first track from her 2025 album, setting the tone for the new release. It features a compelling beat and Satti's signature vocal delivery." },
+                        { id: "poptoo-song2", title: "Song 2 (Pop Too)", info: "A fresh new sound from Pop Too, demonstrating Satti's evolving artistry. This track incorporates unique instrumental arrangements and a captivating melody." },
+                        { id: "poptoo-song3", title: "Song 3 (Pop Too)", info: "Another exciting track from her latest release, showcasing her continued innovation in music. This song combines traditional elements with modern electronic sounds." }
+                    ]
+                }
+            },
+            "singles": [
+                { id: "single-ygrofili", title: "Ygro Filli", year: 2008, info: "One of Satti's early singles, showcasing her initial musical explorations." },
+                { id: "single-miafora", title: "Mia fora", year: 2012, info: "A standalone single from 2012, contributing to her developing discography." },
+                { id: "single-enakalo", title: "Ena kalokairi", year: 2012, info: "A non-album single from 2012, capturing a summer vibe." },
+                { id: "single-argosvineis", title: "Argosvineis moni (feat. Tareq)", year: 2013, info: "A collaboration with Tareq from 2013, highlighting her collaborative spirit." },
+                { id: "single-underthestars", title: "Under the Stars", year: 2015, info: "A single released in 2015, contributing to her growing collection of works." },
+                { id: "single-koupes", title: "Koupes", year: 2016, info: "An original, contemporary rendition of a traditional Asia Minor song. 'Koupes' received widespread attention, reaching over 22 million views on YouTube and was included in Ravin & Bob Sinclar's Buddha Bar: 20 Years Anniversary compilation album." },
+                { id: "single-nifada", title: "Nifada", year: 2017, info: "A single from 2017, further showcasing her unique musical style and gaining popularity." },
+                { id: "single-mantissa", title: "Mantissa", year: 2017, info: "Released in May 2017, 'Mantissa' (meaning 'Fortune Teller') reached the top of the Greek and Bulgarian charts in less than one week. It gained international recognition and was praised by NPR as a generation-inspiring summer hit." },
+                { id: "single-pali", title: "Pali", year: 2021, info: "A popular single released in 2021, known for its unique blend of traditional and contemporary elements, further solidifying Satti's distinctive sound." },
+                { id: "single-giatipouli", title: "Γιατί Πουλί Μ'", year: 2022, info: "A single released in 2022, adding to her post-YENNA discography." },
+                { id: "single-zeimpekiko", title: "Ζεϊμπέκικο II (feat. Dionysis Savvopoulos, Mikros Kleftis)", year: 2023, info: "A significant collaboration from 2023, bringing together prominent Greek artists." },
+                { id: "single-tucutum", title: "Tucutum", year: 2023, info: "A viral Greek song with humorous references to Balkan trap trends. 'Tucutum' was a significant turning point, showcasing a more urban and contemporary sound that went viral in Greece." },
+                { id: "single-zari", title: "Zari", year: 2024, info: "Greece's entry for the Eurovision Song Contest 2024. 'Zari' fuses traditional Greek and Balkan music with urban vibes and pop/rap influences, achieving notable international chart success." },
+                { id: "single-anatoli", title: "Anatoli", year: 2024, info: "A single released in 2024, distinct from the album version, highlighting her continued exploration of traditional sounds with a modern twist." },
+                { id: "single-elaela", title: "Ela Ela", year: 2025, info: "A recent single from 2025, often featuring collaborations and showcasing her evolving pop and urban influences." },
+                { id: "single-fashionkillah", title: "Fashion Killah (feat. Tso)", year: 2025, info: "A 2025 collaboration with Tso, demonstrating Satti's continued engagement with contemporary urban music." },
+                { id: "single-cosmos", title: "Cosmos (feat. Oge)", year: 2025, info: "A 2025 feature on Oge's album 'Status 2', showcasing her versatility as a featured artist." }
+            ]
+        };
+
+        // --- Get Modal Elements ---
+        const infoModal = document.getElementById('infoModal');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        const albumDetailsModal = document.getElementById('albumDetailsModal');
+        const closeAlbumModalBtn = document.getElementById('closeAlbumModal');
+        const albumTitleElem = document.getElementById('albumTitle');
+        const albumDescriptionElem = document.getElementById('albumDescription');
+        const albumSongsList = document.getElementById('albumSongsList');
+
+        const songDetailsModal = document.getElementById('songDetailsModal');
+        const closeSongModalBtn = document.getElementById('closeSongModal');
+        const songTitleElem = document.getElementById('songTitle');
+        const songInfoElem = document.getElementById('songInfo');
+
+        const albumListContainer = document.getElementById('album-list');
+        const singleListContainer = document.getElementById('single-list');
+
+
+        // --- Modal Functions ---
+        function showModal(modalElement) {
+            modalElement.classList.remove('hidden');
+        }
+
+        function hideModal(modalElement) {
+            modalElement.classList.add('hidden');
+        }
+
+        // --- Event Listeners for Modals ---
+        closeModalBtn.addEventListener('click', () => hideModal(infoModal));
+        closeAlbumModalBtn.addEventListener('click', () => hideModal(albumDetailsModal));
+        closeSongModalBtn.addEventListener('click', () => hideModal(songDetailsModal));
+
+        // --- Populate Discography Sections (without interactivity) ---
+        function populateDiscography() {
+            // Populate Albums
+            for (const albumKey in discographyData.albums) {
+                const album = discographyData.albums[albumKey];
+                const albumCard = document.createElement('div');
+                // Removed cursor-pointer and hover effects to indicate non-interactivity
+                albumCard.className = 'bg-gray-800 rounded-xl shadow-lg p-4 transform transition-transform duration-200';
+                albumCard.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-100 mb-1">${album.title}</h3>
+                    <p class="text-gray-400 text-sm">${album.year}</p>
+                `;
+                // Removed event listener
+                albumListContainer.appendChild(albumCard);
+            }
+
+            // Populate Singles
+            discographyData.singles.forEach(single => {
+                const singleCard = document.createElement('div');
+                // Removed cursor-pointer and hover effects to indicate non-interactivity
+                singleCard.className = 'bg-gray-800 rounded-xl shadow-lg p-4 transform transition-transform duration-200';
+                singleCard.innerHTML = `
+                    <h3 class="text-xl font-semibold text-gray-100 mb-1">${single.title}</h3>
+                    <p class="text-gray-400 text-sm">${single.year}</p>
+                `;
+                // Removed event listener
+                singleListContainer.appendChild(singleCard);
+            });
+        }
+
+        // --- Initialize on page load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            populateDiscography();
+        });
+    </script>
+</body>
+</html>
